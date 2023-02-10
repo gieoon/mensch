@@ -94,7 +94,25 @@ const cssString3 = `
 }
 `
 
-var ast = mensch.parse(cssString2, options);
+const cssString4 = `
+@media (min-width: 640px) {
+    .sm\:container {
+      width: 100%
+    }
+  
+    @media (min-width: 640px) {
+      .sm\:container {
+        max-width: 640px
+      }
+    }
+}
+
+p {
+    background-color: red;
+}
+`
+
+var ast = mensch.parse(cssString4, options);
 var css = mensch.stringify(ast, options);
 
-// console.log(css);
+console.log(css);
