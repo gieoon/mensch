@@ -112,7 +112,7 @@ p {
 }
 `
 
-var ast = mensch.parse(cssString4, options);
+var ast = mensch.parse(cssString, options);
 var css = mensch.stringify(ast, options);
 
 console.log(css);
